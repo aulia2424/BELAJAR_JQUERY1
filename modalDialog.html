@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal Dengan JQuery</title>
+    <style>
+      * {
+        font-family: "comic sans ms";
+      }
+      #tombol {
+        background-color: #f6a9a9;
+        color: white;
+        padding: 7px;
+        border: 1px #f6a9a9;
+        border-radius: 3px;
+        z-index: 1004;
+        position: relative;
+      }
+      #tombol:hover {
+        background-color: black;
+        cursor: pointer;
+      }
+      h1 {
+        margin-left: 60px;
+      }
+      h3 {
+        margin-left: 20px;
+      }
+      #modal-box {
+        background-color: #ccc;
+        border-radius: 10px;
+        margin-right: 15px;
+        margin-left: 15px;
+        padding-bottom: 10px;
+        display: none;
+        z-index: 1003;
+        position: relative;
+      }
+      #modal-box p {
+        margin-right: 20px;
+      }
+      #close {
+        float: right;
+      }
+      #close-button {
+        width: 25px;
+        height: 25;
+        background-color: #b33030;
+        text-align: center;
+        font-weight: bold;
+        color: white;
+        border-radius: 10px;
+      }
+      #close-button a {
+        text-decoration: none;
+        color: white;
+      }
+      #close-button:hover {
+        background-color: #f6a9a9;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="tombol">Informasi</button>
+    <div id="modal-box">
+      <div id="close">
+        <div id="close-button"><a href="">X</a></div>
+      </div>
+      <div id="modal">
+        <h1>Black Death</h1>
+        <img src="bddecode.jpg" style="margin-left: 20px; float: left; margin-right: 15px" />
+        <h3>
+          <p>
+            Maut Hitam, disebut juga Wabah Hitam atau Black Death, adalah suatu pandemi hebat yang pertama kali melanda Eropa pada pertengahan hingga akhir abad ke-14 (1347 – 1351) dan membunuh sepertiga hingga dua pertiga populasi Eropa.
+          </p>
+          <p>
+            Pada saat yang hampir bersamaan, terjadi pula epidemi pada sebagian besar Asia dan Timur Tengah, yang menunjukkan bahwa peristiwa di Eropa sebenarnya merupakan bagian dari pandemi multiregional. Jika termasuk Timur Tengah,
+            India, dan Tiongkok, Maut Hitam telah merenggut sedikitnya 75 juta nyawa.
+          </p>
+
+          <p>Penyakit yang sama diduga kembali melanda Eropa pada setiap generasi dengan perbedaan intensitas dan tingkat fatalitas yang berbeda hingga abad 1700-an.</p>
+          <br />
+
+          <img src="doctor.png" style="width: 500px; height: 300px; float: left; margin-right: 15px" />
+          <p>
+            Dokter-dokter pada masa Black Death dikatakan memakai kostum dengan jubah hitam panjang. Bagian mata terbuka karena adanya lubang pada kostum yang digunakan. Mereka juga membawa tongkat kayu untuk mencegah interaksi secara
+            langsung dengan pasien. Sementara bagian masker, ada moncong mirip paruh burung yang ternyata memiliki tujuan khusus.
+          </p>
+
+          <p>
+            Mengutip Live Science, Plague Doctor mengisi masker mereka dengan theriac, senyawa yang terdiri lebih dari 55 tumbuhan dan komponen lain seperti kayu manis dan madu. De Lorme berpendapat, bentuk paruh pada masker akan memberi
+            udara cukup waktu untuk disaring oleh tumbuhan pelindung sebelum masuk ke lubang hidung dan paru-paru.
+          </p>
+          <br />
+
+          <img src="kutu.jpg" style="width: 500px; height: 300px; float: right; margin: 0 15px 0 15px" />
+          <p>
+            Faktanya, wabah ini disebabkan oleh Yersinia pestis, bakteri yang dapat ditularkan dari hewan ke manusia dan melalui gigitan kutu, kontak dengan cairan atau jaringan yang terkontaminasi, juga lewat menghirup tetesan infeksi dari
+            bersin atau batuk orang. Serta, perlindungan dari kostum Plague Doctor sendiri sebenarnya belum cukup melindungi mereka dari risiko paparan penyakit ini.
+          </p>
+          <p>
+            Beberapa wabah penting yang muncul kemudian antara lain Wabah Italia (1629 – 1631), Wabah Besar London (1665 – 1666), Wabah Besar Wina (1679), Wabah Besar Marseille (1720 – 1722), serta wabah pada tahun 1771 di Moskwa. Penyakit
+            ini berhasil dimusnahkan di Eropa pada awal abad ke-19, tetapi masih berlanjut pada bagian lain dunia (Afrika Tengah dan Oriental, Madagaskar, Asia, beberapa bagian Amerika Selatan).
+          </p>
+          <br />
+
+          <img src="black death.jpg" style="width: 220px; height: 120px; float: left; margin-right: 15px" />
+          <br />
+          <p>
+            Maut Hitam menimbulkan akibat drastis terhadap populasi Eropa, serta mengubah struktur sosial Eropa. Wabah ini mengakibatkan perburuan dan pembunuhan terhadap kaum minoritas seperti Yahudi, pendatang, pengemis, serta penderita
+            lepra. Ketidakpastian untuk tetap bertahan hidup menciptakan suatu kecenderungan yang tak sehat pada masyarakat untuk hidup hanya untuk hari ini, seperti digambarkan oleh Giovanni Boccaccio pada The Decameron (1353).
+          </p>
+        </h3>
+      </div>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script src="modalDialog.js"></script>
+    <!-- Kalian tau ga sih kalau manusia juga pernah mengalami pandemi luar biasa sebelum Covid-19? Ya, dulu umat manusia harus dihadapkan dengan wabah mematikan yang bernama The Black Death atau yang lebih kita kenal dengan sebutan pes. Gimana sih ceritanya? Dan bagaimana caranya umat manusia bisa lepas dari seramnya wabah tersebut? Yuk disimak! -->
+  </body>
+</html>
